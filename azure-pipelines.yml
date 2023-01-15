@@ -46,10 +46,3 @@ steps:
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
     artifactName: 'WebBanking'
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Azure for Students (58444039-352d-46c4-9b45-95d5fc480943)'
-    appType: 'webAppLinux'
-    WebAppName: 'WebBanking'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
